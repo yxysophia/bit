@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>树形菜单</title>
+		<style>
+			.no_circle
+			{
+				list-style: none;
+				display: none; /*首先设为隐藏*/
+			}
+			a{
+				text-decoration: none;
+				color: black;
+			}
+			a:hover /*鼠标经过*/
+			{
+				color: red;
+			}
+		</style>
+	</head>
+	<script type="text/javascript">
+		function dis(id1)
+		{
+			if(document.getElementById(id1).style.display=='block')
+			{
+				document.getElementById(id1).style.display='none'; //通过文学艺术找到下面的id,将id列设为隐藏
+				//触动的层如果处于显示状态，则隐藏
+			}else{
+				document.getElementById(id1).style.display='block';
+				//触动的层如果处于隐藏状态，则显示
+			}
+		}
+	</script>
+	<body>
+		<b><img src="img/fold.gif"/> 树形菜单</b>
+		<ul><a href="javascript:onclick=dis('art') "><img src="img/fclose.gif" />文学艺术</a></ul>
+		<ul id="art" class="no_circle">
+			<li><img src="img/doc.gif" />先锋写作</li>
+			<li><img src="img/doc.gif" />小说散文</li>
+			<li><img src="img/doc.gif" />诗词风韵</li>	
+		</ul>
+		
+		<ul><a href="javascript:onclick=dis('photo')"><img src="img/fclose.gif" />贴图专区</a></ul>
+		<ul id="photo" class="no_circle">
+			<li><img src="img/doc.gif" />真我风采</li>
+			<li><img src="img/doc.gif" />视频贴图</li>
+			<li><img src="img/doc.gif" />行行摄摄</li>	
+			<li><img src="img/doc.gif" />Flash贴图</li>	
+		</ul>
+		
+		<ul><a href="javascript:onclick=dis('house')"><img src="img/fclose.gif" />房屋论坛</a></ul>
+		<ul id="house" class="no_circle">
+			<li><img src="img/doc.gif" />我要买房</li>
+			<li><img src="img/doc.gif" />楼市话题</li>
+			<li><img src="img/doc.gif" />我要卖房</li>	
+			<li><img src="img/doc.gif" />租房心语</li>	
+			<li><img src="img/doc.gif" />二手市场</li>	
+		</ul>
+		
+		<ul><a href="javascript:onclick=dis('ele')"><img src="img/fclose.gif" />娱乐八卦</a></ul>
+		<ul id="ele" class="no_circle">
+			<li><img src="img/doc.gif" />红楼一梦</li>
+			<li><img src="img/doc.gif" />笑话论坛</li>
+			<li><img src="img/doc.gif" />休闲生活</li>	
+			<li><img src="img/doc.gif" />大话春秋</li>	
+		</ul>
+	</body>
+</html>
